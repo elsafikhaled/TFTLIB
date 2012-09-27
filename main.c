@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include "myTFTLCD.h"
+#include "TFTLIB.h"
 
 int main()
 {

@@ -87,7 +87,7 @@ void writeData_unsafe(uint16_t d);
 
 void goTo(int x, int y)
 {
-  writeRegister(0x0020, x);
+	writeRegister(0x0020, x);
 	writeRegister(0x0021, y);
 	writeCommand(0x0022);
 }
@@ -109,10 +109,10 @@ void fillScreen(uint16_t color)
 
 void drawPixel(uint16_t x, uint16_t y, uint16_t color)
 {
-  writeRegister(TFTLCD_GRAM_HOR_AD, x);
-  writeRegister(TFTLCD_GRAM_VER_AD, y);
-  writeCommand(TFTLCD_RW_GRAM);
-  writeData(color);
+	writeRegister(TFTLCD_GRAM_HOR_AD, x);
+    writeRegister(TFTLCD_GRAM_VER_AD, y);
+    writeCommand(TFTLCD_RW_GRAM);
+    writeData(color);
 }
 
 uint16_t _regValues[] PROGMEM = {
@@ -171,7 +171,8 @@ uint16_t _regValues[] PROGMEM = {
 
 void initDisplay(void)
 {
-  DATADDR = 0xFF;
+
+	DATADDR = 0xFF;
 	COMDDR |= COMMASK
 	uint16_t a, d;
 
