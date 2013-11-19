@@ -4,7 +4,7 @@ FILES = main.c TFTLIB.c
 PROGRAMMER = usbtiny
 
 all:
-	avr-g++ -g -Os -mmcu=$(MMU) -c $(FILES) -F_CPU=16000000UL
+	avr-g++ -g -Os -mmcu=$(MMU) -c $(FILES)
 	avr-g++ -g -mmcu=$(MMU) -o main.elf main.o TFTLIB.o
 	avr-objcopy -j .text -j .data -O ihex main.elf $(HEX)
 
